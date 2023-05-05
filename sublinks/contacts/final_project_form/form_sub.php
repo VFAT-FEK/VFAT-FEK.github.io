@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Set the recipient email address(es)
-  $to = "eddwaynerainey@gmail.com";
+  $to = "eeeee@gmail.com";
 
   // Sanitize the form data
   $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
