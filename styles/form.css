@@ -1,0 +1,510 @@
+/* <!--
+Notes
+--> */
+
+/* the styles for the elements */
+body {
+    background-image: url("../Images/background.png");
+    background-color: #cccccc;
+    background-position: center;
+	font-family: Arial, Helvetica, sans-serif;
+    width: 950px;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid darkslategray;
+    box-shadow: 0 10px 20px 10px;
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+a {
+    font-weight: bold;
+}
+/* the styles for the header */
+header {
+    background-image: url("../Images/Icon_b.png");
+    padding: 15px 30px;
+    border-bottom: 2px solid rgb(174, 233, 233);
+    border-radius: 1%; 
+}
+header h2 {
+    background-image: url("../Images/Sunset_alt.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 265%;
+	font-style: italic;
+	color: rgb(248, 207, 191);
+	text-shadow: 2px 2px 2px darkslategray;
+    text-decoration: underline;
+    margin-bottom: .03em;
+    border: black;
+    border-radius: 80px;
+    border-style: inset;
+}
+header h3 {
+	font-size: 150%;
+    text-indent: 0px;
+    padding-bottom: .75em;       
+}
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: left;
+    border-bottom: 2px solid darkblue;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+#nav_menu ul li {
+    flex-basis: 20%;
+	float: left;
+    display: block;
+    padding: 0;
+    padding-left: 1%;
+    text-decoration: overline;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 180px;
+	padding: .7em 0;
+	background-color: darkcyan;
+    font-weight: bold;
+	color: white
+    ;
+}
+#nav_menu ul li a.current {
+	color: black;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: forestgreen;
+}
+main {
+    display: flex;
+}
+
+/* the styles for the section */
+section {
+    padding: 1.5625em 3.3333%;
+    flex-basis: 73%;
+    order: 2;
+    width: 680px;
+	float: right;
+    padding: 25px 30px 0 30px;
+    background-blend-mode: hard-light;
+    background: rgba(255, 255, 255, 0.6);
+    display: grid;
+    grid-template: "main" auto "section" auto / 100%;
+}
+
+section h1 {
+    background-image: linear-gradient(to bottom, rgba(76, 175, 80, 0.3), rgba(76, 175, 175, 0.3));
+    font-size: 160%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: .3em;
+}
+section h2 {
+    background: rgba(64, 167, 231, 0.2);
+    font-size: 130%;
+    margin-bottom: .5em;
+}
+section h3 {
+    background-image: linear-gradient(to bottom, rgba(35, 62, 57, 0.3), rgba(20, 235, 235, 0.3));
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: maroon;
+    font-size: 110%;
+    margin-bottom: .4em;
+    letter-spacing: .09rem; 
+
+}
+section h5 {
+    display: none !important;
+}
+
+section p {
+    background-image: linear-gradient(to bottom, rgba(26, 32, 32, 0.2), rgba(58, 110, 107, 0.2));
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: .7em;
+}
+section .rightImage {
+    float: right;
+    margin-left: 1em;
+    border: 1px solid black;
+}
+section a:link, section a:visited { 
+    color: maroon;
+}
+section a:hover, section a:focus {
+    color: darkslategray;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-row {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  
+  select,
+  textarea {
+      float: center;
+  }
+  
+  .form-row label {
+    flex-basis: 18%;
+    text-align: right;
+  }
+  
+  .form-row input,
+  .form-row select {
+      flex-basis: 70%;
+  }
+  
+  .form-row input[type="submit"] {
+      margin-right: 10px;
+  }
+  
+  /* styles for the submit button */
+  
+  .form-row2 {
+      display: inline-block;
+      padding: 0 0 0 7%;
+  }
+  .form-row2 input[type="submit"] {
+      width: 180px;
+  } 
+  
+  /* add red border for invalid input fields */
+  input:invalid {
+  border: 2px solid maroon;
+  }
+  
+  /* add black border for valid input fields */
+  input:valid {
+  border: 1px solid black;
+  }
+  
+  /* add black border for input fields with no value */
+  input:placeholder-shown {
+  border: 1px solid black;
+  }
+  
+  
+  /* add red border for invalid email input fields */
+  input[type=email]:invalid {
+    border: 2px solid maroon;
+  }
+  
+  /* add black border for valid email input fields */
+  input[type=email]:valid {
+    border: 1px solid black;
+  }
+
+.button {
+	display: inline-block;
+	padding: 2em 2em;
+	font-size: 3em;
+	font-weight: bold;
+    text-decoration: overline;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #fff;
+	background-color: #0077ff;
+	border-radius: 1em;
+	box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.button:hover {
+	transform: translateY(-0.1em);
+	box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.2);
+}
+
+#visual_page {
+    display: block;
+    width: 89%;
+    padding: .5%;
+    border: #262626;
+}
+
+/* the styles for the footer */
+footer {
+    clear: both; 
+	padding: 15px 30px;
+    background-color: darkgray;
+} 
+footer p {
+    background-clip: border-box;
+	text-align: center;
+    font-size: 85%;
+    color: white;    
+}
+#mobile_menu {
+	display: none;
+}
+.demo-typewriter span {
+    margin: 0;
+    float: left;
+    width: 55% 0%;   
+  }  
+/* media queries */
+
+
+
+@media only screen and (max-width: 900px) {
+	body {
+		font-size: 90%;
+		box-shadow: none;
+	}
+
+    aside {
+        padding: 1.5625em 0 0 3.3333%;
+        flex-basis: 17%;
+        order: 1;
+        background: rgba(255, 255, 255, 0.5);
+        width: 50px;
+        padding: 5px 15px 15px 15px;      
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        flex-direction: column;
+    }
+	#nav_menu {
+		display: none;
+	}
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: rgba(243, 225, 247, 0) !important;
+	    padding: 3px !important;
+        margin: 0%;
+        float: left;
+    }
+    section h1 {
+
+        margin: 2%;
+        padding: 2%;
+    }
+    header img { display: none; margin: 0 auto;
+    }
+    header h2 {
+        margin: auto;
+        float: center;
+        padding: 0%;
+    }
+    header h3 {
+        margin: auto;
+
+    }
+    #mobile_menu {
+        display: block;
+        position: fixed;
+        top: 1%;
+        left: 0;
+        width: 100%;
+        height: 50px; /* fixed height */
+        margin-top: 50px; /* equal to the height of the navigation menu */
+        z-index: 100;
+        background-color: #37413ed2;
+        box-shadow: 0 2px 5px rgba(194, 45, 45, 0.596);
+        }
+        #mobile_menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #mobile_menu li {
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #272424;
+            border-bottom: 1px solid #ff0d0d;
+        }
+        #mobile_menu li:last-child {
+            border-bottom: none;
+        }
+          #mobile_menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fffdfd;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        #mobile_menu li a:hover {
+            background-color: #f2f2f2;
+        }	
+	header h2 {
+		font-size: 200%;
+        margin: 0;
+        width: 70%;
+	}
+	section {
+        height: auto;
+        margin: 2%;
+		float: left;
+        width: 55%;
+	} 
+    section h5 {
+        display: contents;
+        font-size: larger;
+        position: absolute;
+    } 
+	aside {
+        display: none;
+        
+	}
+    .demo-typewriter span {
+        margin: 0;
+		float: left;
+        width: 55% 0%;
+        
+       
+      }
+    .type2 span {
+        margin: 0;
+        width: 55%;       
+      }
+      
+}
+@media only screen and (max-width: 479px) {
+    main {
+        flex-direction: column;
+    }
+
+    body {
+        max-width: 300px;
+        margin: 0 auto;
+    }	
+	#nav_menu {
+		display: none;
+	}	
+    .slicknav_menu {
+        background: transparent !important;
+        padding: 3px !important;
+        margin: 0%;
+        float: left;
+    }	
+    section h1 {
+        visibility: hidden;
+    }      
+    header img {
+		display: none;
+		margin: 0 auto;
+	}	
+
+    #nav_menu {
+        display: none;
+      }
+    #mobile_menu {
+    display: block;
+    position: fixed;
+    top: 1%;
+    left: 0;
+    width: 100%;
+    height: 50px; /* fixed height */
+    margin-top: 50px; /* equal to the height of the navigation menu */
+    z-index: 100;
+    background-color: #37413ed2;
+    box-shadow: 0 2px 5px rgba(194, 45, 45, 0.596);
+    }
+    #mobile_menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #mobile_menu li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: #272424;
+        border-bottom: 1px solid #ff0d0d;
+    }
+    #mobile_menu li:last-child {
+        border-bottom: none;
+    }
+      #mobile_menu li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fffdfd;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    #mobile_menu li a:hover {
+        background-color: #f2f2f2;
+    }	
+    section {
+        height: auto;
+        padding: 40px;
+        margin: 0;
+		float: none;
+        width: 73.5%;
+	}
+    aside {
+        display: none;
+	}
+    header h2 {
+		font-size: 180%;
+	}
+    header h3 {
+		font-size: 115%;
+	}
+    section p {
+	    font-size: 95%;
+    }
+}
+@keyframes demo-typewriter {
+    from { 
+      width: 0;
+    }
+    to { 
+      width: 100%;
+    }
+}  
+@keyframes demo-cursor {
+    from, to { 
+      border-color: transparent;
+    }
+    50% { 
+        border-color: #FF8D8D;
+    }  
+}
+
+

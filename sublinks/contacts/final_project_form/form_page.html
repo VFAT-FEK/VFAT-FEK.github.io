@@ -1,0 +1,135 @@
+<!--
+Home
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VFAT - FEK | CONTACTS</title>
+	<link rel="stylesheet" href="../../../styles/form.css">
+	<link rel="stylesheet" href="../../../styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../../js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+</head>
+
+<body>
+	<header>
+		<h2>:VFAT-FEK:</h2>
+	</header>
+
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">	
+    	<ul>
+			<li><a href="../../../index.html">Home</a></li>
+    	    <li><a href="../../../sublinks/visuals/visuals.html">Visuals</a></li>
+			<li><a href="../../../sublinks/sounds/sounds.html">Sounds</a></li>
+    	    <li><a href="../../contacts/final_project_form/form_page.html" class="current">Contacts</a></li>
+			<li><a href="../../../sublinks/about/about.html">About</a></li>
+    	</ul>
+	</nav>
+    <main>
+      <section>
+        <h3>Contact form</h3>
+        <p>(Asterisks (*) indicate required entries.)</p>
+        <form id="form" action="form_sub.php" method="post">
+          <fieldset>
+            <legend><b>Who are you?</b></legend>
+            <div class="form-row">
+              <label for="name">* Full name:</label><br>
+              <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>            
+            <div class="form-row">
+              <label for="email">* Email:</label><br>
+              <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <div class="form-row">
+              <label for="reason">* Reason for contact:</label><br>
+              <select id="reason" name="gender" required>
+                <option value="">Select a reason</option>
+                <option value="Sighting">Evidence</option>
+                <option value="Question">Question</option>
+                <option value="Tip">Submit Tip</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="Age">Age:</label><br>
+              <select id="Age" name="Age">
+                <option value="">Select your age:</option>
+                <option value="Above 21">Above 25 years old</option>
+                <option value="Below 21">Below 25 years old</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+              <legend><b>Additional Information</b></legend>
+              Where are you reporting from?<br>
+              <input type="radio" name="lifestyle" id="withinUSA" value="Within USA" checked>
+              <label for="withinUSA">Within USA</label>
+              <input type="radio" name="lifestyle" id="lifestyle2" value="lifestyle2">
+              <label for="OutsideUSA">Outside USA</label>
+              <input type="radio" name="lifestyle" id="lifestyle3" value="lifestyle3">
+              <label for="other_location">Other</label><br><br>
+              Is this your first contact?<br>
+              <input type="radio" name="activity" id="activity1" value="activity1" checked>
+              <label for="first_contact">Yes</label>
+              <input type="radio" name="activity" id="activity2" value="activity2">
+              <label for="not_first_contact">no</label><br><br>
+            </fieldset>
+            <fieldset>
+                <legend><b>VFAT-FEK:</b></legend>
+                If you are reporting a sighting related to VFAT-FEK, please add additional information here:<br>
+                <input type="checkbox" name="Food" id="food1" value="food1">
+                <label for="food1">Vegetarian</label>
+                <input type="checkbox" name="Food" id="food2" value="food2">
+                <label for="food2">Gluten-free</label>
+                <input type="checkbox" name="Food" id="food3" value="food3">
+                <label for="food3">Kosher</label>
+                <input type="checkbox" name="Food" id="food4" value="food4">
+                <label for="food4">low salt</label><br>
+                <input type="checkbox" name="Food" id="food5" value="food5">
+                <label for="food5">Other, please explain:</label>
+                <div class="form-other-restriction-food">
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><b>Comments</b></legend>
+                <input type="checkbox" name="comment" id="comment1" value="comment1">
+                <label for="comment1">Include any additional information that will help us develop a custom menu designed to match your lifestyle and your goals.</label>
+                <div class="form-other-restriction-food">
+                    <textarea id="notes" name="notes" rows="4"></textarea>                
+                </div>                
+            </fieldset>
+            <fieldset>
+              <legend><b>Favorite Color?</b></legend>
+              <div class="form-row">
+                <input type="color" id="color" name="color">
+              </div>              
+          </fieldset>
+            <fieldset>
+                <legend><b>Process your information</b></legend>
+                <div class="form-row2">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="form-row2">
+                    <input type="reset" value="Start over">'
+                </div>
+            </fieldset>
+            </form>
+      </section>
+    <aside>
+
+    </aside>
+    </main>
+    <footer>
+      <p>&copy; 2022 VFAT-FEK<br>All media on this site is owned by webmaster<br>:: Referencing: VFAT (A virtual file allocation table) and FEK (File Encryption Key)::</p>
+    </footer>
+</body>
+</html>

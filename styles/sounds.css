@@ -1,0 +1,391 @@
+/* 
+/* <!--
+Notes
+--> */ */
+
+
+/* the styles for the elements */
+body {
+    background-image: url("../Images/background.png");
+    background-color: #cccccc;
+    background-position: center;
+	font-family: Arial, Helvetica, sans-serif;
+    width: 950px;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid darkslategray;
+    box-shadow: 0 10px 20px 10px;
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+a {
+    font-weight: bold;
+}
+
+/* the styles for the header */
+header {
+    background-image: url("../Images/Icon_b.png");
+    padding: 15px 30px;
+    border-bottom: 2px solid rgb(174, 233, 233);
+    border-radius: 1%; 
+}
+
+header h2 {
+    background-image: url("../Images/Sunset_alt.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 265%;
+	font-style: italic;
+	color: rgb(248, 207, 191);
+	text-shadow: 2px 2px 2px darkslategray;
+    text-decoration: underline;
+    margin-bottom: .03em;
+    border: black;
+    border-radius: 80px;
+    border-style: inset;
+}
+header h3 {
+	font-size: 150%;
+    text-indent: 0px;
+    padding-bottom: .75em;       
+}
+
+
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: left;
+    border-bottom: 2px solid darkblue;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+#nav_menu ul li {
+    flex-basis: 20%;
+	float: left;
+    display: block;
+    padding: 0;
+    padding-left: 1%;
+    text-decoration: overline;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 180px;
+	padding: .7em 0;
+	background-color: darkcyan;
+    font-weight: bold;
+	color: white
+    ;
+}
+#nav_menu ul li a.current {
+	color: black;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: forestgreen;
+}
+main {
+    display: flex;
+}
+
+/* the styles for the section */
+section {
+    padding: 1.5625em 3.3333%;
+    flex-basis: 100%;
+    order: 2;
+    width: 680px;
+	float: right;
+    padding: 25px 30px 0 30px;
+    background-blend-mode: hard-light;
+    background: rgba(255, 255, 255, 0.6);
+    display: grid;
+    grid-template: "main" auto "section" auto / 100%;
+}
+
+/*nth-child is a CSS pseudo-class | th.left:nth-child(3) selects the third th element with the class left, and td.right selects all td elements with the class right. Together, these two selectors match the 'Works' and 'Notes' columns of the table.  */
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 5px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+th.left:first-child {
+    width: 15%;
+}
+th.left:nth-child(3),
+td.right {
+    width: 10%;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/*The ::-webkit-media-controls-panel selector is used to style the controls of the audio player. TThe ::-webkit-media-controls-volume-slider selector is used to adjust the width of the volume slider, making it narrower than the default. */
+
+td audio {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+td audio::-webkit-media-controls-panel {
+    background-color: #4e4e4e;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+td audio::-webkit-media-controls-play-button,
+td audio::-webkit-media-controls-volume-slider-container {
+    filter: invert(1);
+}
+
+td audio::-webkit-media-controls-volume-slider {
+    width: 60%;
+}
+
+td audio::-webkit-media-controls-timeline-container {
+    margin-top: 8px;
+}
+table video {
+    width: 100%;
+    max-width: 1000px; /* adjust as needed */
+    height: auto;
+}
+
+/* the styles for the footer */
+footer {
+    clear: both; 
+	padding: 15px 30px;
+    background-color: darkgray;
+} 
+footer p {
+    background-clip: border-box;
+	text-align: center;
+    font-size: 85%;
+    color: white;    
+}
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	body {
+		font-size: 90%;
+		box-shadow: none;
+	}
+
+    aside {
+        padding: 1.5625em 0 0 3.3333%;
+        flex-basis: 17%;
+        order: 1;
+        background: rgba(255, 255, 255, 0.5);
+        width: 50px;
+        padding: 5px 15px 15px 15px;      
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        flex-direction: column;
+    }
+	#nav_menu {
+		display: none;
+	}
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: rgba(243, 225, 247, 0) !important;
+	    padding: 3px !important;
+        margin: 0%;
+        float: left;
+    }
+    section h1 {
+
+        margin: 2%;
+        padding: 2%;
+    }
+    header img { display: none; margin: 0 auto;
+    }
+    header h2 {
+        margin: auto;
+        float: center;
+        padding: 0%;
+    }
+    header h3 {
+        margin: auto;
+
+    }
+    #nav_menu {
+        display: none;
+      }
+      #mobile_menu {
+        display: block;
+        position: fixed;
+        top: 1%;
+        left: 0;
+        width: 100%;
+        height: 50px; /* fixed height */
+        margin-top: 50px; /* equal to the height of the navigation menu */
+        z-index: 100;
+        background-color: #37413ed2;
+        box-shadow: 0 2px 5px rgba(194, 45, 45, 0.596);
+    }
+    #mobile_menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #mobile_menu li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: #272424;
+        border-bottom: 1px solid #ff0d0d;
+    }
+    #mobile_menu li:last-child {
+        border-bottom: none;
+    }
+      #mobile_menu li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fffdfd;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    #mobile_menu li a:hover {
+        background-color: #f2f2f2;
+      }	
+	header h2 {
+		font-size: 200%;
+        margin: 0;
+        width: 70%;
+	}
+	section {
+        height: auto;
+        margin: 0;
+		float: left;
+        width: 65%;
+	}
+    td audio {
+        display: block;
+        margin: 0 auto;
+        width: 103%;
+        max-width: 500px;
+        background-color: #333;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      td audio::-webkit-media-controls-panel {
+        background-color: #4e4e4e;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      td audio::-webkit-media-controls-play-button,
+      td audio::-webkit-media-controls-volume-slider-container {
+        filter: invert(1);
+      }
+      
+      td audio::-webkit-media-controls-volume-slider {
+        width: 20%;
+      }
+      
+      td audio::-webkit-media-controls-timeline-container {
+        margin-top: 8px;
+        padding: 20px 50px; /* adjust left and right padding as needed */
+      }
+      
+      td audio::-webkit-media-controls-timeline {
+        width: 200%;
+      }
+      
+      
+      
+      table video {
+        width: 100%;
+        max-width: 1000px; 
+        height: auto;
+      }
+	aside {
+        display: none;
+        
+	}
+
+}
+@media only screen and (max-width: 479px) {
+    header h2 {
+		font-size: 180%;
+	}
+	header h3 {
+		font-size: 115%;
+	}
+    section p {
+	    font-size: 95%;
+    }
+}
+
+@keyframes demo-typewriter {
+    from { 
+      width: 0;
+    }
+    to { 
+      width: 100%;
+    }
+  }  
+  @keyframes demo-cursor {
+    from, to { 
+      border-color: transparent; 
+  }
+    50% { 
+  border-color: #FF8D8D; 
+    }
+  }
